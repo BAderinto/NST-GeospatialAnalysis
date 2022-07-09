@@ -1,12 +1,4 @@
 library(tidyverse)
-library(pins)
-library(sp)
-library(sf)
-library(raster)
-#library(rgdal)
-library(tmap)      # Easy way of producing maps
-library(spatialEco)
-library(terra)
 library(janitor)
 library(googlesheets4)
 
