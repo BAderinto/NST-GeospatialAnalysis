@@ -4,7 +4,7 @@ name: nst-jc
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '0 15 * * *'
+    - cron:  '0 1 * * *'
 
 
 jobs: 
@@ -20,15 +20,8 @@ jobs:
     # Set-up R
     - name: Install packages
       run: |
-        R -e 'install.packages("tidyverse")'
-        R -e 'install.packages("janitor")'
-        R -e 'install.packages("sf")'
-        R -e 'install.packages("sp")'
-        R -e 'install.packages("raster")'
-        R -e 'install.packages("spatialEco")'
-        R -e 'install.packages("terra")'
-        R -e 'install.packages("googlesheets4")'
-        R -e 'install.packages("pins")'
+        R -e 'install.packages("renv")'
+        R -e 'renv::restore()'
         
     # Run R script
     - name: NST_geospatial_analysis
